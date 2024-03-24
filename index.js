@@ -1,9 +1,16 @@
 const express = require('express')
+const cookieParser = require('cookie-parser')
 const app = express()
 app.use(express.json())
+app.use(cookieParser())
 
-const UserRoute = require('./routes/user.route')
-app.use('/user', UserRoute)
+
+
+
+const AuthRoute = require('./routes/auth.route')
+app.use('/auth', AuthRoute)
+
+
 
 app.listen(3000, async() => {
     try{

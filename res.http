@@ -1,2 +1,11 @@
-###
-GET http://localhost:3000/user
+### REGISTER USER
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "name": "test_name",
+    "age": "132"
+}
+
+#####
+GET http://localhost:3000/auth/logout
